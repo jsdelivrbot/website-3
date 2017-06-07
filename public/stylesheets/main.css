@@ -7,12 +7,14 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  width: 80%;
 }
 a:link, a:visited {
   color: #aaa;
 }
 .container p {
   text-align: left;
+  margin: 20px 10px;
 }
 @media only screen and ( min-width: 768px ) {
   .container p {
