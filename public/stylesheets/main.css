@@ -10,24 +10,26 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 80%;
 }
 a:link, a:visited {
   color: #aaa;
 }
 .container p {
   text-align: left;
-  margin: 20px 10px;
+  margin: 25px 50px;
 }
 .content-header {
   margin: 40px;
 }
-.back {
+.home-link {
   text-align: center;
   margin: 20px;
 }
-@media only screen and ( min-width: 768px ) {
+@media only screen and ( max-width: 768px ) {
+  .center {
+    width: 80%;
+  }
   .container p {
-    margin: 25px 50px;
+    margin: 20px 10px;
   }
 }
