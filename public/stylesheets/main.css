@@ -1,8 +1,11 @@
-.custom-header {
+body {
+  font-size: 16px;
+}
+.center-parent {
   height: 100vh;
   position: relative;
 }
-.container {
+.center {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -15,6 +18,13 @@ a:link, a:visited {
 .container p {
   text-align: left;
   margin: 20px 10px;
+}
+.content-header {
+  margin: 40px;
+}
+.back {
+  text-align: center;
+  margin: 20px;
 }
 @media only screen and ( min-width: 768px ) {
   .container p {

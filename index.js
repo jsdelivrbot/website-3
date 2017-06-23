@@ -9,13 +9,21 @@ app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
-app.get('/about', function(request, response) {
-  response.render('pages/about');
-});
-
 app.get('/*', function(request, response) {
-  console.log(request.originalUrl, 'requested');
-  response.render('pages/index');
+  let path = request.originalUrl.substr(1);
+  let pageStyle = 'content';
+  if (!path.length) {
+    path = 'index';
+    pageStyle = 'center';
+  }
+  console.log(path, 'requested');
+  app.render('partials/' + path + '.ejs', {}, function(error) {
+    if (error || path === '404') {
+      path = '404';
+      pageStyle = 'center';
+    }
+  })
+  response.render('pages/index', {page: path, pageStyle: pageStyle});
 });
 
 app.listen(app.get('port'), function() {

@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>achhunna mali</h1>
+  <div class="contact">
+    <% const links = {
+      about: '/about',
+      blog: '/blog',
+      github: 'https://github.com/achhunna',
+      linkedin: 'https://linkedin.com/in/achhunna',
+      photos: '/photos'
+    } %>
+    <% const lastKey = Object.keys(links).sort().reverse()[0] %>
+    <% for (let link in links) { %>
+      <a href='<%= links[link] %>'><%= link %></a>
+      <% if (link !== lastKey) { %>|<% } %>
+    <% } %>
+  </div>
+</div>
