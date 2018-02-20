@@ -25,6 +25,9 @@ a:link, a:visited {
   text-align: center;
   margin: 20px;
 }
+.bold {
+  font-weight: bold;
+}
 @media only screen and ( max-width: 768px ) {
   .center {
     width: 80%;
