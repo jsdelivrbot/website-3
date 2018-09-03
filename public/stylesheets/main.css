@@ -1,7 +1,13 @@
 body {
   font-size: 16px;
 }
-.center-parent {
+.parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+}
+.parent-center {
   height: 100vh;
   position: relative;
 }
@@ -14,7 +20,10 @@ body {
 a:link, a:visited {
   color: #aaa;
 }
-.container p {
+.container {
+  max-width: 768px;
+}
+.container li {
   text-align: left;
   margin: 25px 50px;
 }
@@ -28,11 +37,15 @@ a:link, a:visited {
 .bold {
   font-weight: bold;
 }
+.container .footnote {
+  text-align: center;
+  margin-top: 100px;
+}
 @media only screen and ( max-width: 768px ) {
   .center {
     width: 80%;
   }
-  .container p {
+  .container li {
     margin: 20px 10px;
   }
 }

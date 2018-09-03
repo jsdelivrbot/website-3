@@ -5,20 +5,22 @@
 </head>
 
 <body>
-  <div class="text-center">
-      <% let path = '../partials/' + page + '.ejs' %>
-      <% if (pageStyle === 'center') { %>
-        <div class="center-parent">
-          <div class="center">
+  <div class="parent">
+    <div class="text-center">
+        <% let path = '../partials/' + page + '.ejs' %>
+        <% if (pageStyle === 'center') { %>
+          <div class="parent-center">
+            <div class="center">
+              <%- include(path) %>
+            </div>
+          </div>
+        <% } else { %>
+          <div class="container">
             <%- include(path) %>
           </div>
-        </div>
-      <% } else { %>
-        <div class="container">
-          <%- include(path) %>
-        </div>
-      <% } %>
+        <% } %>
+    </div>
+    <%- include('../partials/footer.ejs', {page: page}) %>
   </div>
-  <%- include('../partials/footer.ejs', {page: page}) %>
 </body>
 </html>
